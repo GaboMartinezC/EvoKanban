@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/custom.css">
+        <link rel="icon" href="assets/circlelogo.png">
+        <title>EvoKanban</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top customColor">
+            <div class="container-fluid">
+                <h1 style="display: flex;">
+                    <img src="assets/circlelogo.png" width="100px">
+                    <p class="pt-4 p-4">Evo Kanban</p>
+                </h1>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</button>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid text-center">
+            <h1 class="title pt-5">Método Kanban</h1>
+            <p class="m-4">
+                Es un método visual de gestión de proyectos que permite a los equipos visualizar sus flujos de trabajo y la
+                carga de trabajo. En un tablero Kanban, el trabajo se muestra en un proyecto en forma de tablero
+                organizado por columnas. Tradicionalmente, cada columna representa una etapa del trabajo. <br>
+                <strong>EvoKanban</strong> es una plataforma creada para servir como Kanban personal, orientada al
+                <strong>Desarrollo de Software</strong>
+            </p>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+                <span>Registrarse</span>
+            </button>
+            <div class="customColor p-5 m-5 row text-center">
+                <img src="assets/kanban.png" alt="">
+            </div>
+        </div>
+        <br>
+        <footer class="fixed-bottom customColor pt-3">
+            <div class="container-fluid text-center">
+              <p>
+                EvoKanban - Gabo MartínezC
+              </p>
+            </div>
+        </footer>
+    </body>
+    <!--Login-->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-3">
+                            <input class="form-control m-1" type="text" placeholder="Usuario" id="txtUsuarioLogin">
+                            <input class="form-control mt-3" type="password" placeholder="Contraseña" id="txtContraLogin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-outline-light" id="btnLogin">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Registro-->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Registro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div action="" class="p-3">
+                            <input class="form-control mt-3" type="text" placeholder="Usuario" id="txtUsuarioRegistro">
+                            <input class="form-control mt-3" type="text" placeholder="Email" id="txtEmailRegistro">
+                            <input class="form-control mt-3" type="password" placeholder="Contraseña" id="txtContraRegistro">
+                            <input class="form-control mt-3" type="password" placeholder="Confirmar Contraseña" id="txtConfirmarContra">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-outline-light" id="btnRegistro">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="js/acceso.js"></script>

@@ -1,0 +1,9 @@
+.customColor {
+    background-color: #295259
+}
+.bordeTareas{
+    border-color: #d4d4d4;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5%;
+}
