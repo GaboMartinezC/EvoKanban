@@ -2,9 +2,9 @@
     class Database 
     {
         private $host = 'localhost';
-        private $user = 'root';
-        private $password = '';
-        private $database = 'EvoKanban';
+        private $user = 'id21792627_evo';
+        private $password = 'Gifu1963.';
+        private $database = 'id21792627_evokanban';
 
         public function getConnection(){
             $hostDB = "mysql:host=".$this->host.";dbname=".$this->database.";";

@@ -55,18 +55,15 @@
                 header('HTTP/1.1 404 Usuario no se ha eliminado correctamente');
             }
         }
-        public static function BuscarUsuario($idUsuario)
+        public static function BuscarUsuario($nombreUsuario)
         {
             $database = new Database();
             $conn = $database->getConnection();
-            $stmt = $conn->prepare('SELECT * FROM USUARIO WHERE ID = :idUsuario');
-            $stmt->bindParam(':idUsuario',$idUsuario);
+            $stmt = $conn->prepare('SELECT * FROM USUARIO WHERE USUARIO = :nombreUsuario');
+            $stmt->bindParam(':nombreUsuario',$nombreUsuario);
             if($stmt->execute()){
                 $result = $stmt->fetchAll();
                 echo json_encode($result);
-                header('HTTP/1.1 201 OK');
-            } else {
-                header('HTTP/1.1 404 No se ha podido consultar los usuarios');
             }
         }
     }
