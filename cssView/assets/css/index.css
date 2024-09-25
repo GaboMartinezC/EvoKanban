@@ -20,13 +20,19 @@ body
     padding: 5%;
     background-color: aliceblue
 }
+.contenedorLogin, formulario{
+    width: 75%;
+}
 .contenedorTitulos{
     display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     justify-content: center;
     margin-bottom: .5em;
 }
 .formulario input
 {
+    margin-bottom: .5em;
     color: #333;
     font-size: 1.2rem;
 	margin: 0 auto;
@@ -38,17 +44,16 @@ body
     display: block;
     border-bottom: 0.3rem solid transparent;
     transition: all 0.3s;
+    margin-bottom: .5em;
 }
 .imagen
 {
     display: flex;
     justify-content: center;
-    margin-left: 1em;
 }
 .imagen img
 {
     border-radius: 8%;
-    margin-left: .5em;
     width: 100px;
 }
 .panelBtns
@@ -83,4 +88,8 @@ a span, button span
 {
     display: flex; 
     padding: .5em;
+}
+.columna{
+    float: left;
+    width: 25%;
 }

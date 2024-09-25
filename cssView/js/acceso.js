@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const url = 'https://evokanban.000webhostapp.com/api/usuarios/';
-
+    
     $('#btnLogin').click(function() {
         let usuario = $('#txtUsuarioLogin').val();
         let contra = $('#txtContraLogin').val();
@@ -56,7 +56,13 @@ $(document).ready(function () {
     });
 
     $('#btnRegistrarse').click(function() {
-        window.location.href = 'registro.html'
+        $('#formRegistro').show();
+        $('#formLogin').hide();
+    })
+
+    $('#btnVolver').click(function() {
+        $('#formRegistro').hide();
+        $('#formLogin').show();
     })
 
     $('#btnRegistro').click(function() {
