@@ -1,86 +1,135 @@
+/*Fuentes*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-body 
+/*Sistema de columnas*/
+.container 
 {
-    background-color: rgb(4, 65, 105);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.row 
+{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
-.contenedorPrincipal{
-    display: flex;
-    justify-content: center;
-    border-radius: 8px;
-    margin-top: 10vh;
-    width: 50%;
-    height: 50%;
-    padding: 5%;
-    background-color: aliceblue
+  
+[class*="col-"] 
+{
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
 }
-.contenedorLogin, formulario{
-    width: 75%;
+
+.col-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+.col-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+.col-3 { flex: 0 0 25%; max-width: 25%; }
+.col-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+.col-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+.col-6 { flex: 0 0 50%; max-width: 50%; }
+.col-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+.col-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+.col-9 { flex: 0 0 75%; max-width: 75%; }
+.col-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+.col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+
+@media (max-width: 576px) {
+    .col-sm-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+    .col-sm-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+    .col-sm-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-sm-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+    .col-sm-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+    .col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-sm-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+    .col-sm-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+    .col-sm-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-sm-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+    .col-sm-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+    .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
 }
-.contenedorTitulos{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: .5em;
+
+@media (min-width: 768px) {
+    .col-md-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+    .col-md-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+    .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-md-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+    .col-md-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-md-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+    .col-md-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+    .col-md-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-md-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+    .col-md-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+    .col-md-12 { flex: 0 0 100%; max-width: 100%; }
 }
-.formulario input
+  
+@media (min-width: 992px) {
+    .col-lg-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+    .col-lg-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+    .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-lg-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+    .col-lg-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+    .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-lg-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+    .col-lg-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+    .col-lg-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-lg-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+    .col-lg-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+    .col-lg-12 { flex: 0 0 100%; max-width: 100%; }
+} 
+/*Componentes*/
+input
 {
     margin-bottom: .5em;
     color: #333;
     font-size: 1.2rem;
 	margin: 0 auto;
-    padding: 1.5rem 2rem;
-    border-radius: 0.2rem;
+    padding: 1rem;
+    border-radius: 10px;
     background-color: rgb(255, 255, 255);
     border: none;
     width: 90%;
     display: block;
-    border-bottom: 0.3rem solid transparent;
     transition: all 0.3s;
     margin-bottom: .5em;
 }
-.imagen
-{
-    display: flex;
-    justify-content: center;
-}
-.imagen img
-{
-    border-radius: 8%;
-    width: 100px;
-}
-.panelBtns
-{
-    padding: 0%;
-    list-style-type: none; 
-    display: flex;
-    justify-content: center;
+.inputAlt{
+    margin-top: .75em;
+    height: 10%;
+    background-color: #333;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: .5px;
 }
 .btn
 {
+    margin-left: 2.5em;
     text-decoration: none;
     display: flex;
-    width: 20em;
-    margin-right: .5em;
+    margin-right: 1em;
     justify-content: center;
     background-color: rgb(4, 65, 105);
-    border-radius: 10%;
+    border-radius: 10px;
     outline: none;
     border-radius: 4px;
     border: 1px solid transparent;
     transition: 0.5s;
     color: rgb(240, 248, 255);
     font-size: medium;
-    margin-top: .5em;
+    margin-top: 1em;
+    width: 75%;
 }
-.btn:hover{
+.btn:hover
+{
     background-color: rgb(42, 133, 194);
     transition: 0.5s;
 }
@@ -89,7 +138,61 @@ a span, button span
     display: flex; 
     padding: .5em;
 }
-.columna{
-    float: left;
-    width: 25%;
+.centrado{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.imagen img
+{
+    border-radius: 8%;
+    width: 100px;
+}
+#contPrincipal
+{
+    background-color: rgb(214, 214, 214);
+    padding: 2em;
+    margin: 2.5em;
+}
+.panel
+{
+    margin-top: 2.5em;
+    padding: 2.5em;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #333;
+    width: 80%;
+    color: white;
+}
+.kanban
+{
+    border-style: solid;
+    border-color: beige;
+    border-width: .25px;
+    border-radius: 10px;
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: .5em;
+}
+.tarea
+{
+    display: block;
+    justify-content: center;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 8%;
+    background-color: rgb(4, 65, 105);;
+}
+.tarea .boton
+{
+    border-radius: 10px;
+    margin-top: 1em;
+    background-color: #333;
+}
+.tarea .boton:hover{
+    background-color: #868686;
+    transition: 0.5s;
 }

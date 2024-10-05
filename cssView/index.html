@@ -6,73 +6,105 @@
     <link rel="icon" href="assets/img/circlelogo.png">
     <link rel="stylesheet" href="assets/css/index.css">
     <title>EvoKanban</title>
+    <!--Estilos adicionales-->
+    <style>               
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(4, 65, 105);
+        }
+    </style>
 </head>
 <body>
-    <div class="contenedorPrincipal">
-        <div class="contenedorLogin">
-            <div class="contenedorTitulos">
-                <h1>Login</h1>
-                <div class="imagen">
-                    <img src="https://raw.githubusercontent.com/GaboMartinezC/EvoKanban/refs/heads/main/view/assets/circlelogo.png" alt="">
-                </div>
+    <div class="container" id="contPrincipal">
+        <div class="row">
+            <div class="col-12 centrado">
+                <img src="assets/img/circlelogo.png" style="height: 10vh;">
             </div>
-            <!--Form Login-->
-            <div class="contenedorForm" style="display: block;" id="formLogin">
-                <div class="formulario">
-                    <input type="text" placeholder="Usuario" id="txtUsuarioLogin">
-                    <input type="password" placeholder="Contraseña" id="txtContraLogin">
-                </div>
-                <div>
-                    <div>
-                        <ul class="panelBtns">
-                            <li>
+            <div class="col-12 centrado">
+                <h1>Bienvenid@ - Login</h1>
+            </div>
+            <!--Form-->
+            <div class="col-12">
+                <!--Form Login-->
+                <div class="container" style="display: block;" id="formLogin">
+                    <!--Inputs-->
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" placeholder="Usuario" id="txtUsuarioLogin">
+                        </div>
+                        <div class="col-12">
+                            <input type="password" placeholder="Contraseña" id="txtContraLogin">
+                        </div>
+                    </div>
+                    <!--Botones-->
+                    <div class="row">
+                        <div class="col-12 row"></div>
+                            <div class="col-12 col-md-6 centrado">
                                 <button class="btn" id="btnLogin"> 
                                     <span>Ingresar</span>
                                     <span>
                                         <svg width="19" height="19" style="margin-top: 15%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f0f8ff" d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
                                     </span>
                                 </button>
-                                
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-12 col-md-6 centrado">
                                 <button class="btn" id="btnRegistrarse">
                                     <span>Registrarse</span>
                                     <span>
                                         <svg width="19" height="19" style="margin-top: 15%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f0f8ff" d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304l0 128c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-223.1L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6l29.7 0c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9 232 480c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-128-16 0z"/></svg>
                                     </span>
                                 </button>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--Form Registro-->
-            <div class="contenedorForm" style="display: none;" id="formRegistro">
-                <div class="formulario">
-                    <input type="text" placeholder="Usuario" id="txtUsuarioRegistro">
-                    <input type="text" placeholder="Email" id="txtEmailRegistro">
-                    <input type="password" placeholder="Contraseña" id="txtContraRegistro">
-                    <input type="password" placeholder="Confirmar Contraseña" id="txtConfirmarContra">
-                </div>
-                <div>
-                    <ul class="panelBtns">
-                        <li>
-                            <button class="btn" id="btnRegistro"> 
-                                <span>Registrarse</span>
-                                <span>
-                                    <svg width="19" height="19" style="margin-top: 15%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f0f8ff" d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
-                                </span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="btn" id="btnVolver">
-                                <span>Volver</span>
-                                <span>
-                                    <svg width="19" height="19" style="margin-top: 15%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f0f8ff" d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
-                                </span>
-                            </button>
-                        </li>
-                    </ul>
+                <!--Form Registro-->
+                <div class="container" style="display: none;" id="formRegistro">
+                    <!--Inputs-->
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" placeholder="Usuario" id="txtUsuarioRegistro">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" placeholder="Email" id="txtEmailRegistro">
+                        </div>
+                        <div class="col-12">
+                            <input type="password" placeholder="Contraseña" id="txtContraRegistro">
+                        </div>
+                        <div class="col-12">
+                            <input type="password" placeholder="Confirmar Contraseña" id="txtConfirmarContra">
+                        </div>
+                    </div>
+                    <!--Botones-->
+                    <div class="row">
+                        <div class="col-12 row"></div>
+                            <div class="col-12 col-md-6 centrado">
+                                <button class="btn" id="btnRegistro"> 
+                                    <span>Registrarse</span>
+                                    <span>
+                                        <svg width="19" height="19" style="margin-top: 15%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f0f8ff" d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 centrado">
+                                <button class="btn" id="btnVolver">
+                                    <span>Volver</span>
+                                    <span>
+                                        <svg width="19" height="19" style="margin-top: 15%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f0f8ff" d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

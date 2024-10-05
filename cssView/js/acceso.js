@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const url = 'https://evokanban.000webhostapp.com/api/usuarios/';
+    const url = 'http://localhost/backend/api/usuarios/';
     
     $('#btnLogin').click(function() {
         let usuario = $('#txtUsuarioLogin').val();
